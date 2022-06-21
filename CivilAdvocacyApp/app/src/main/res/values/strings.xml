@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CivilAdvocacyApp</string>
+    <string name="u00a9_2022_ronil_christian">© 2022, Ronil Christian</string>
+    <string name="information_api">Information API</string>
+    <string name="version_1_0">Version 1.0</string>
+    <string name="google_civic"><a href="https://developers.google.com/civic-information/">Google Civic Information API</a></string>
+    <string name="data_provided_by">Data provided by</string>
+    <string name="civil_advocacy_app">Civil Advocacy App</string>
+</resources>

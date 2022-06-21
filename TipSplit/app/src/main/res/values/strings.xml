@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TipSplit</string>
+    <string name="rb12">12%</string>
+    <string name="rb15">15%</string>
+    <string name="rb18">18%</string>
+    <string name="rb20">20%</string>
+</resources>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OfficialActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/officialConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/officialLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#7B1FA2"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Location" />
+
+        <TextView
+            android:id="@+id/officialOffice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/officialPhotoView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialLocation"
+            tools:text="office" />
+
+        <TextView
+            android:id="@+id/officialName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/officialOffice"
+            app:layout_constraintStart_toStartOf="@+id/officialOffice"
+            app:layout_constraintTop_toBottomOf="@+id/officialOffice"
+            tools:text="officeName" />
+
+        <TextView
+            android:id="@+id/officialParty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/officialPhotoView"
+            app:layout_constraintStart_toStartOf="@+id/officialPhotoView"
+            app:layout_constraintTop_toBottomOf="@+id/officialLocation"
+            tools:text="officeParty" />
+
+        <ImageView
+            android:id="@+id/officialPhotoView"
+            android:layout_width="240dp"
+            android:layout_height="360dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="officeOfficial"
+            android:onClick="officialPhotoClicked"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialParty"
+            tools:srcCompat="@drawable/missing" />
+
+        <ImageView
+            android:id="@+id/partyIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="officeParty"
+            android:onClick="partyIconClicked"
+            app:layout_constraintBottom_toBottomOf="@+id/officialPhotoView"
+            app:layout_constraintEnd_toEndOf="@+id/officialPhotoView"
+            app:layout_constraintStart_toStartOf="@+id/officialPhotoView"
+            app:srcCompat="@drawable/placeholder" />
+
+        <TextView
+            android:id="@+id/addressTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Address:"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/officialName"
+            tools:text="address" />
+
+        <TextView
+            android:id="@+id/addressLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/officialPhotoView"
+            app:layout_constraintStart_toEndOf="@+id/addressTitle"
+            app:layout_constraintTop_toTopOf="@+id/addressTitle"
+            tools:text="officeAddress" />
+
+        <TextView
+            android:id="@+id/phoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Phone:"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/addressTitle"
+            app:layout_constraintTop_toBottomOf="@+id/addressLine"
+            tools:text="phone" />
+
+        <TextView
+            android:id="@+id/phoneLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/addressLine"
+            app:layout_constraintStart_toStartOf="@+id/addressLine"
+            app:layout_constraintTop_toBottomOf="@+id/addressLine"
+            tools:text="officePhone" />
+
+        <TextView
+            android:id="@+id/websiteTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Website:"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/phoneTitle"
+            app:layout_constraintTop_toBottomOf="@+id/phoneTitle"
+            tools:text="website" />
+
+        <TextView
+            android:id="@+id/websiteLine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/addressLine"
+            app:layout_constraintStart_toStartOf="@+id/phoneLine"
+            app:layout_constraintTop_toBottomOf="@+id/phoneLine"
+            tools:text="officeWebsite" />
+
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="48dp"
+            android:contentDescription="iconFacebook"
+            android:onClick="facebookClicked"
+            app:layout_constraintStart_toStartOf="@+id/websiteLine"
+            app:layout_constraintTop_toBottomOf="@+id/websiteLine"
+            app:srcCompat="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/twitter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="48dp"
+            android:contentDescription="iconTwitter"
+            android:onClick="twitterClicked"
+            app:layout_constraintStart_toEndOf="@+id/facebook"
+            app:layout_constraintTop_toBottomOf="@+id/websiteLine"
+            app:srcCompat="@drawable/twitter" />
+
+        <ImageView
+            android:id="@+id/youtube"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="48dp"
+            android:contentDescription="iconYoutube"
+            android:onClick="youTubeClicked"
+            app:layout_constraintStart_toEndOf="@+id/twitter"
+            app:layout_constraintTop_toBottomOf="@+id/websiteLine"
+            app:srcCompat="@drawable/youtube" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
